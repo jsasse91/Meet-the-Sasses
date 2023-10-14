@@ -1,0 +1,64 @@
+<!--
+    Assignment requirements:
+        *   create a site with a minimum of 3 pages
+            *   each page must have links to navigate between other pages
+            *   the project must contain 2 different sized headers
+            *   the project must contain a list
+            *   the project must contain 3 images
+
+-->
+
+<!-- using ! emmet to insert the boiler plate-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--Give the page a title, this defines the tab title-->
+    <title>The Sasse Boys</title>
+</head>
+<!--add a background color so the table color below isn't -->
+<body style="background-color: lightgoldenrodyellow;">
+        <!--Defines the header of the page-->
+        <header>
+            <!--h1 defines the highest level of header on the page-->
+            <h1>
+                The Sasse Boys
+            </h1>
+        </header>
+<!--Define the main portion/content of the page-->
+<main>
+<!--adds a horizontal rule just to pretty it up-->
+<hr>
+    <!--creating the top nav links to the other pages, each link is to a separate page in the project-->
+    <nav>
+        <a href="./index.html">The Sasse Family</a>
+        <a href="./boys.html">The Sasse Boys</a>
+        <a href="./pets.html">The Sasse Pets</a>
+    </nav>
+<!--adds a horizontal rule just to pretty it up-->
+<hr>
+    <!--add an image of the boys-->
+    <img src="images/boys.jpeg" width="300" alt="An image of the Sasse Boys">
+    <br>
+    <p>
+        Brayden (pictured left), is just south of 13 years old and just started 7th grade! Landon (pictured right), 
+        is about to turn 10 years old and just started 4th grade. This makes their parents feel <i>very</i> old.
+    </p>
+    <br>
+    <section>
+        <!--Make a super impartial form-->
+        <h2>Who's cuter (I'm not biased, you are)</h2>
+        <form action="/action_page.php">
+            <input type="radio" id="Brayden" name="cute" value="Brayden">
+                <label for="Brayden">Brayden, but also Landon</label><br>
+            <input type="radio" id="Landon" name="cute" value="Landon">
+                <label for="Landon">Landon, but also Brayden</label><br>
+            <input type="radio" id="Both" name="cute" value="Both">
+                <label for="Both">Both, it's a tie!</label><br>
+        </form>
+    </section>
+</main>
+</body>
+</html>
