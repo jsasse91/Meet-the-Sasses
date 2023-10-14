@@ -1,13 +1,3 @@
-<!--
-    Assignment requirements:
-        *   create a site with a minimum of 3 pages
-            *   each page must have links to navigate between other pages
-            *   the project must contain 2 different sized headers
-            *   the project must contain a list
-            *   the project must contain 3 images
-
--->
-
 <!-- using ! emmet to insert the boiler plate-->
 <!DOCTYPE html>
 <html lang="en">
@@ -15,42 +5,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
 <!--Give the page a title, this defines the tab title-->
     <title>The Sasse Family</title>
 </head>
 <!--add a background color so the table color below isn't -->
-<body style="background-color: lightgoldenrodyellow;">
-        <!--Defines the header of the page-->
-        <header>
-            <!--h1 defines the highest level of header on the page-->
-            <h1>
-                The Sasse Family
-            </h1>
-        </header>
-<!--Define the main portion/content of the page-->
-<main>
-<!--adds a horizontal rule just to pretty it up-->
-<hr>
-    <!--creating the top nav links to the other pages, each link is to a separate page in the project-->
-    <nav>
-        <a href="./index.html">The Sasse Family</a>
-        <a href="./boys.html">The Sasse Boys</a>
-        <a href="./pets.html">The Sasse Pets</a>
-    </nav>
-<!--adds a horizontal rule just to pretty it up-->
-<hr>
-    <!--add an image of the family-->
-    <img src="images/fampic1.jpeg" width="300" alt="An image of the Sasse Family">
-    <br>
-    <!--h2 defines a header level just below the h1-->
-    <h2>Meet the Sasse's!</h2>
-    <!--create an unordered list to show members of the family and a fun fact-->
-    <ul>
-        <li>Jake - Dad, Kansas City Chiefs fan</li>
-        <li>Ashley - Mom, Supernatural (the show) Fanatic</li>
-        <li>Brayden - Big Brother, if it's One Piece, he's in</li>
-        <li>Landon - Little Brother, obsessed with Sonic the Hedgehog</li>
-    </ul>
-</main>
+<body>
+    <!--Defines the header of the page-->
+    <header>
+        <!--h1 defines the highest level of header on the page, gave it an id of shadow so I can target only the h1's-->
+        <h1 id="shadow">
+            The Sasse Family
+        </h1>
+    </header>
+    <!--Define the main portion/content of the page-->
+    <main>
+        <!--creating a place for the links to other pages, each link is to a separate page in the project
+    added id to target page links-->
+        <div id="navlinks">
+            <!--creating class to show which page you are on-->
+            <a class="active" href="./index.html">The Sasse Family</a>
+            <a href="./boys.html">The Sasse Boys</a>
+            <a href="./pets.html">The Sasse Pets</a>
+        </div>
+        <!--creating a place for family pic and bulleted list, add class to
+        focus on this specific div-->
+        <div class="sasse-fam">
+            <!--add an image of the family-->
+            <img src="images/fampic1.jpeg" alt="An image of the Sasse Family">
+            <div class="sasse-list"><!--h2 defines a header level just below the h1-->
+                <h2>Meet the Sasse's!</h2>
+                <!--create an unordered list to show members of the family and a fun fact-->
+                <ul>
+                    <li>Jake - Dad, Kansas City Chiefs fan</li>
+                    <li>Ashley - Mom, Supernatural (the show) Fanatic</li>
+                    <li>Brayden - Big Brother, if it's One Piece, he's in</li>
+                    <li>Landon - Little Brother, obsessed with Sonic the Hedgehog</li>
+                </ul>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

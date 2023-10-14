@@ -1,13 +1,3 @@
-<!--
-    Assignment requirements:
-        *   create a site with a minimum of 3 pages
-            *   each page must have links to navigate between other pages
-            *   the project must contain 2 different sized headers
-            *   the project must contain a list
-            *   the project must contain 3 images
-
--->
-
 <!-- using ! emmet to insert the boiler plate-->
 <!DOCTYPE html>
 <html lang="en">
@@ -15,48 +5,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
 <!--Give the page a title, this defines the tab title-->
     <title>The Sasse Pets</title>
 </head>
 <!--add a background color so the table color below isn't -->
-<body style="background-color: lightgoldenrodyellow;">
+<body>
         <!--Defines the header of the page-->
         <header>
-            <!--h1 defines the highest level of header on the page-->
-            <h1>
+            <!--h1 defines the highest level of header on the page, gave it an id of shadow so I can target only the h1's-->
+            <h1 id="shadow">
                 The Sasse Pets
             </h1>
         </header>
 <!--Define the main portion/content of the page-->
-<main>
-<!--adds a horizontal rule just to pretty it up and create separation-->
-<hr>
-    <!--creating the top nav links to the other pages, each link is to a separate page in the project-->
-    <nav>
-        <a href="./index.html">The Sasse Family</a>
-        <a href="./boys.html">The Sasse Boys</a>
-        <a href="./pets.html">The Sasse Pets</a>
-    </nav>
-<!--adds a horizontal rule just to pretty it up and create separation-->
-<hr>
+    <main>
+        <!--creating a place for the links to other pages, each link is to a separate page in the project
+    added id to target page links-->
+        <div id="navlinks">
+            <!--creating class to show which page you are on-->
+            <a href="./index.html">The Sasse Family</a>
+            <a href="./boys.html">The Sasse Boys</a>
+            <a class="active" href="./pets.html">The Sasse Pets</a>
+        </div>
     <!--add an image of each of the pets and provide a brief description, formatted in a table to try and create a 3 column look
     3 column inspiration came from https://forum.freecodecamp.org/t/columns-without-css/404000  -->
-    <table width="100%">
-        <tr>
-            <td width="33.3%"><img src="images/Coolwhip.jpeg" width="450" alt="An image of Coolwhip the Cat"></td>
-            <td width="33.3%"><img src="images/Loki.jpeg" width="450" alt="An image of Loki the Dog"></td>
-            <td width="33.3%"><img src="images/Jill.jpeg" width="450" alt="An image of Jill the Dog"></td>
-        </tr>
-        <tr>
-            <td width="33.3%">Coolwhip, our lovely kitty. Named because she's white like cool whip and we're super creative. 
-                Coolwhip loves getting into things that she definitely shouldn't getting into.</td>
-            <td width="33.3%">Loki, our mischievious pup. Loki's name was given to him prior to adoption and we thought it fit, 
-                so we kept it. Loki loves squeeky toys and long walks.</td>
-            <td width="33.3%">Jill, our slightly less mischievious pup. Like Loki, her name was given prior to adoption as she 
-                was found with another dog as a stray, so they were named after Jack and Jill. Jill loves cuddling under blankets 
-                and getting all of the pets.</td>
-        </tr>
-    </table>
-</main>
+        <div class="pets-table">
+            <table>
+                <tr>
+                    <td><img src="images/Coolwhip.jpeg" alt="An image of Coolwhip the Cat"></td>
+                    <td><img src="images/Loki.jpeg" alt="An image of Loki the Dog"></td>
+                    <td><img src="images/Jill.jpeg" alt="An image of Jill the Dog"></td>
+                </tr>
+                <tr>
+                    <td>Coolwhip, our lovely kitty. Named because she's white like cool whip and we're super creative. 
+                        Coolwhip loves getting into things that she definitely shouldn't getting into.</td>
+                    <td>Loki, our mischievious pup. Loki's name was given to him prior to adoption and we thought it fit, 
+                        so we kept it. Loki loves squeeky toys and long walks.</td>
+                    <td>Jill, our slightly less mischievious pup. Like Loki, her name was given prior to adoption as she 
+                        was found with another dog as a stray, so they were named after Jack and Jill. Jill loves cuddling under blankets 
+                        and getting all of the pets.</td>
+                </tr>
+            </table>
+        </div>    
+    </main>
 </body>
 </html>

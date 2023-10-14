@@ -1,0 +1,147 @@
+/*creating variables so that I can call them later*/
+:root   {
+    --app-bg-menu: #770000;
+    --app-bg-color: #880000;
+    --app-accent-color: rgb(192, 177, 5);
+    --app-accent-color2: white;
+    --app-action-color: #fe040446;
+}
+
+/*I only want to target the headers using these syles making the font bold and the color white*/
+h1, h2      {
+    font: bold;
+    color: var(--app-accent-color2);
+    
+}
+
+/*creating a header bar, using a variable for color which is darker than the rest of the body for contrast, 
+making the font bigger for the header section,
+and tweaking padding and height to make it bigger and more obvious it's a header */
+header {
+    background: var(--app-bg-menu);
+    font-size: 1.5rem;
+    padding: 40px 10px;
+    height: 48px;
+}
+
+/*Let's give that h1 a nice yellow shadow, focused only on elements with the id of shadow*/
+#shadow {
+    text-shadow: var(--app-accent-color) 1px 1px;
+}
+
+/*let's make that background a nice red for the KC Chiefs*/
+body    {
+    background-color: var(--app-bg-color);
+    margin: 0px auto;
+    padding: 0;
+    color: var(--app-accent-color2);
+}
+
+/*items with the id of navlinks will have the same color as the header*/
+#navlinks {
+    background-color: var(--app-bg-menu);
+    display: flex;
+}
+
+/* specifically targeting the links within the div with the id of navlinks, removing the underline
+changing the font to white, aligning the link text to the center to make it look nice*/
+#navlinks a {
+    text-decoration: none;
+    color: var(--app-accent-color2);
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 17px;
+}
+
+/*when I hover over the links, I use a pseudo class because I want them to change color so there's feedback that you are interacting with it*/
+#navlinks a:hover {
+    color: var(--app-accent-color);
+}
+
+/*when a user has clicked on a link in the header, I want them to know what page they are on by having a box around it, it also gets a different color*/
+#navlinks a.active {
+    background-color: var(--app-action-color);
+    color: var(--app-accent-color2);
+    border-style: solid;
+}
+/*sets the content in this div to be in a row when at full screen*/
+.sasse-fam {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+}
+/*sets the max width of the image to 300 pixels*/
+.sasse-fam img {
+    width: 300px;
+}
+
+/*displays the list and header as a block of content so it doesn't do weird alignment stuff*/
+.sasse-list {
+    display: block;
+}
+
+/*Aligns just the header in the div to center*/
+.sasse-list h2 {
+    text-align: center;
+}
+/*sets the content in this div to be in a row when at full screen*/
+.da-boys {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+}
+/*sets the max width of the image to 300 pixels*/
+.da-boys img {
+    width: 300px;
+}
+
+/*displays the list and header as a block of content so it doesn't do weird alignment stuff, 
+also gives it a max width so the text is more condensed, added a left margin to show separation between text and picture*/
+.da-boys-text {
+    max-width: 350px;
+    display: block;
+    text-justify: center;
+    margin-left: 20px;
+}
+
+/*Aligns just the header in the div to center*/
+.da-boys-text h2 {
+    text-align: center;
+}
+
+/*gives the table 3 even columns*/
+.pets-table td {
+    width: 33.3%;
+}
+
+/*sets the max width and height of the images to 150 pixels*/
+.pets-table img {
+    width: 150px;
+    height: 150px;
+}
+
+/*give the form some flair, I used one of the variables I created to define the color, I referenced the lab from the box shadow code*/
+#boys-form{
+    max-width: 500px;
+    margin: 5rem auto;
+    color: var(--app-accent-color2);
+    padding: 1rem 2rem;
+    background-color: var(--app-accent-color);
+    border-radius: 1rem;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+}
+/*adds some responsiveness to the pages*/
+@media only screen and (max-width: 600px) {
+    
+    /*shifts the list to under the picture when under 600 pixels*/
+    .sasse-fam {
+        display: flex;
+        flex-direction: column;
+    }   
+    /*shifts the description below the picture when under 600 pixels*/
+    .da-boys {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
